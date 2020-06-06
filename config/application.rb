@@ -126,11 +126,11 @@ module Greenlight
     config.maintenance_mode = ENV["MAINTENANCE_MODE"] == "true"
 
     config.report_issue_url = ENV["REPORT_ISSUE_URL"]
-
+config.help_url = ENV["HELP_URL"].presence || "#"
     # DEFAULTS
 
     # Default branding image if the user does not specify one
-    config.branding_image_default = "https://raw.githubusercontent.com/bigbluebutton/greenlight/master/app/assets/images/logo_with_text.png"
+    config.branding_image_default = "https://conference.massmeet.com/playback/presentation/2.0/logo.png"
 
     # Default primary color if the user does not specify one
     config.primary_color_default = "#467fcf"
